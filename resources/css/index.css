@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+
+
 body {
     margin: auto;
     /* max-width: 100%; */
@@ -10,16 +13,11 @@ body {
     /* width: 20em; */
     text-align: center;
     background-color: white;
-    opacity: 0.55;
+    opacity: 0.575;
+    border: 0.5rem solid;
+    border-style: outset;
     /* margin: 0 auto; */
     /* filter: alpha(opacity=40); */
-}
-
-.Recipes {
-    /* display: inline-block; */
-    display: table;
-    margin: 0 auto;
-
 }
 
 .box {
@@ -36,8 +34,47 @@ body {
     position: relative;
     top: 50%;
     left: 40%;
+    opacity: 0.575;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50, 50%);
+}
+
+.Recipes {
+    /* display: inline-block; */
+    display: table;
+    margin: 0 auto;
+    padding: 0;
+    text-align: left;
+    font-family: "Bad Script";
+    font-size: 25px;
+}
+
+.Recipes ul li {
+    position: relative;
+    left: 0;
+    color: #d53a17;
+    list-style: none;
+    margin: 4px 0;
+    border-left: 2px solid #2986cc;
+    transition: 0.5s;
+    cursor: pointer;
+
+}
+
+.Recipes ul li:hover {
+    left: 10px;
+}
+
+.Recipes ul li span {
+    position: relative;
+    padding: 10px;
+}
+
+
+
+
+.Recipes {
+    position: relative;
 }
 
 .footer {
