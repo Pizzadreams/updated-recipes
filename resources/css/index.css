@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
 
+* {
+    box-sizing: border-box;
+}
 
 body {
     margin: auto;
@@ -39,6 +42,11 @@ body {
     transform: translate(-50, 50%);
 }
 
+#recipeItems {
+    color: pink;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px, black;
+};
+
 .Recipes {
     /* display: inline-block; */
     display: table;
@@ -55,9 +63,10 @@ body {
     color: #d53a17;
     list-style: none;
     margin: 4px 0;
-    border-left: 2px solid #2986cc;
+    /* border-top: 2px solid #2986cc; */
     transition: 0.5s;
     cursor: pointer;
+    list-style-type: "🍲";
 
 }
 
@@ -68,10 +77,35 @@ body {
 .Recipes ul li span {
     position: relative;
     padding: 10px;
+    padding-left: 12px;
+    display: inline-block;
+    z-index: 1;
+    transition: 0.5s;
 }
 
+.Recipes ul li:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #f5000042;
+    transform: scaleX(0);
+    transform-origin: top;
+    transition: 0.5s;
+}
 
+.Recipes ul li:hover:before {
+    transform: scaleX(1);
+}
 
+/* .list ul li span {
+    position: relative;
+    padding: 8px;
+    padding-left: 12px;
+    display: inline-block;
+    z-index: 1;
+    transition: 0.5s;
+  } */
 
 .Recipes {
     position: relative;
